@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Deadline tracker</title>
+
+  <script src="js/auth.js"></script>
+  <script>checkAuth();</script>
+  <script src="js/countdown.js"></script>
+
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/countdown.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body link="white" vlink="white" alink="white">
+
+  <body>
+    <!-- Landing section -->
+    <section class="landing">
+      <header>
+        <div class="title"></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a class="active" href="#">Countdown</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a onclick="logout();">Log out</a></li>
+        </ul>
+      </header>
+      <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="countdown-title">До конца семестра</h1>
+        <div id="countdown" class="countdown">
+          <div class="countdown-number">
+            <span class="days countdown-time"></span>
+            <span class="countdown-text">Days</span>
+          </div>
+          <div class="countdown-number">
+            <span class="hours countdown-time"></span>
+            <span class="countdown-text">Hours</span>
+          </div>
+          <div class="countdown-number">
+            <span class="minutes countdown-time"></span>
+            <span class="countdown-text">Minutes</span>
+          </div>
+          <div class="countdown-number">
+            <span class="seconds countdown-time"></span>
+            <span class="countdown-text">Seconds</span>
+          </div>
+        </div>
+
+        <script>
+          setupCountdown('countdown');
+        </script>
+      </div>
+    </section>
+
+    <footer>
+      <p>&#169; 2021 <a>TST</a></p>
+    </footer>
+  </body>
+
+</html>

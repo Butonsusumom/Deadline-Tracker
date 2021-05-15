@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Deadline tracker</title>
+
+	<script src="js/auth.js"></script>
+	<script src="js/progress.js"></script>
+	<script>
+		window.onload = setupProgressPieChart();
+	</script>
+	<script>checkAuth();</script>
+
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/firework.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+
+<body link="white" vlink="white" alink="white">
+
+	<body>
+		<!-- Landing section -->
+		<section class="landing">
+			<header>
+				<div class="title"></div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="calendar.html">Calendar</a></li>
+					<li><a class="active" href="#">Progress</a></li>
+					<li><a href="countdown.html">Countdown</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a onclick="logout();">Log out</a></li>
+				</ul>
+			</header>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div id="firework" class="pyro">
+			</div>
+
+			<br>
+			<div id="chartContainer" style="height: 80%; width: 100%;"></div>
+			<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		</section>
+		<footer>
+			<p>&#169; 2021 <a>TST</a></p>
+		</footer>
+
+	</body>
+</body>
+
+</html>

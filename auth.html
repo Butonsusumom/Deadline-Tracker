@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Deadline tracker</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/style_auth.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/dots-anumation.css" />
+
+  <script src="js/auth.js"></script>
+  <script src="js/crypto-js.min.js"></script>
+</head>
+
+<script>
+  window.onload = generateGroupOptions('groups');
+</script>
+
+<body>
+
+  <body>
+    <!-- <form> -->
+    <div class="auth-form">
+      <input checked="" id="signin" type="radio">
+      <label for="signin">Sign in</label>
+      <input id="signup" type="radio">
+      <label for="signup">Sign up</label>
+      <div id="wrapper">
+        <div id="arrow"></div>
+        <input id="email" placeholder="Email" type="text">
+        <input id="pass" placeholder="Password" type="password">
+        <input id="repass" placeholder="Repeat password" type="password">
+        <input id="group" list="groups" placeholder="Group" type="text">
+        <datalist id="groups">
+        </datalist>
+      </div>
+      <button type="submit" onclick="doAuth(
+        document.getElementById('email').value,
+        document.getElementById('pass').value,
+        document.getElementById('repass').value,
+        document.getElementById('group').value
+      );">
+
+        <span>
+          Reset password
+          <br>
+          Sign in
+          <br>
+          Sign up
+        </span>
+      </button>
+      <center>
+        <div id="spinning-loader" class="dot-pulse" style="display: none"></div>
+      </center>
+    </div>
+    </div>
+  </body>
+</body>
+
+</html>
